@@ -5,8 +5,8 @@
 // ------------------------
 (function () {
   const phrases = {
-    en: ['Frontend Developer', 'Web Developer', 'UI Enthusiast'],
-    jp: ['フロントエンド開発者', 'ウェブ開発者', 'UIエンスージアスト']
+    en: ['Frontend Developer', 'Web Developer', 'System Engineer'],
+    jp: ['フロントエンド開発者', 'ウェブ開発者', 'システムエンジニア']
   };
 
   const el = document.getElementById('typed-target');
@@ -38,7 +38,6 @@
     setTimeout(tick, forward ? 80 : 50);
   }
 
-  // Function to change language without resetting DOM
   window.setTypedLang = function (newLang) {
     if (phrases[newLang]) {
       lang = newLang;
@@ -51,6 +50,7 @@
 
   tick();
 })();
+
 // IMAGE POPUP
 const popup = document.getElementById("image-popup");
 const popupImg = document.getElementById("popup-img");
@@ -107,112 +107,45 @@ function setLang(lang) {
   document.getElementById('footer-name').textContent = isEn
     ? 'Saw Thar Htoo Kyaw'
     : 'ソータートゥチョー (Saw Thar Htoo Kyaw)';
+
   // ------------------------
   // Skills Section
   // ------------------------
-  document.getElementById('skills-title').textContent =
-    isEn ? "Skills" : "スキル";
-
-  document.getElementById('skills-sub').textContent =
-    isEn ? "Core frontend skills and tools I use." : "主に使用しているフロントエンドスキルとツールです。";
-
-  document.getElementById('html-desc').textContent =
-    isEn
-      ? "Semantic HTML structure, clean markup, and accessibility-focused layouts."
-      : "セマンティックHTML、クリーンなマークアップ、アクセシビリティを意識した構造。";
-
-  document.getElementById('css-desc').textContent =
-    isEn
-      ? "Responsive design, Flexbox, Grid, animations, and modern UI styling."
-      : "レスポンシブデザイン、Flexbox、Grid、アニメーション、モダンなUIスタイル。";
-
-  document.getElementById('js-desc').textContent =
-    isEn
-      ? "Interactive UI, DOM manipulation, event handling, and modular code."
-      : "インタラクティブなUI、DOM操作、イベント処理、モジュール化されたコード。";
-
-  document.getElementById('mysql-desc').textContent =
-    isEn
-      ? "Database design, queries, CRUD operations, and integration with server-side Java."
-      : "データベース設計、クエリ、CRUD操作、サーバーサイドJavaとの連携。";
-
-  document.getElementById('java-desc').textContent =
-    isEn
-      ? "Object-oriented programming, backend logic, and integration with database systems."
-      : "オブジェクト指向開発、バックエンドロジック、データベース連携。";
-
-  document.getElementById('servlet-desc').textContent =
-    isEn
-      ? "Server-side request handling, MVC architecture, and dynamic web application development."
-      : "サーバーサイドのリクエスト処理、MVCアーキテクチャ、動的Webアプリ開発。";
-
+  document.getElementById('skills-title').textContent = isEn ? "Skills" : "スキル";
+  document.getElementById('skills-sub').textContent = isEn ? "Core frontend skills and tools I use." : "主に使用しているフロントエンドスキルとツールです。";
+  document.getElementById('html-desc').textContent = isEn ? "Semantic HTML structure, clean markup, and accessibility-focused layouts." : "セマンティックHTML、クリーンなマークアップ、アクセシビリティを意識した構造。";
+  document.getElementById('css-desc').textContent = isEn ? "Responsive design, Flexbox, Grid, animations, and modern UI styling." : "レスポンシブデザイン、Flexbox、Grid、アニメーション、モダンなUIスタイル。";
+  document.getElementById('js-desc').textContent = isEn ? "Interactive UI, DOM manipulation, event handling, and modular code." : "インタラクティブなUI、DOM操作、イベント処理、モジュール化されたコード。";
+  document.getElementById('mysql-desc').textContent = isEn ? "Database design, queries, CRUD operations, and integration with server-side Java." : "データベース設計、クエリ、CRUD操作、サーバーサイドJavaとの連携。";
+  document.getElementById('java-desc').textContent = isEn ? "Object-oriented programming, backend logic, and integration with database systems." : "オブジェクト指向開発、バックエンドロジック、データベース連携。";
+  document.getElementById('servlet-desc').textContent = isEn ? "Server-side request handling, MVC architecture, and dynamic web application development." : "サーバーサイドのリクエスト処理、MVCアーキテクチャ、動的Webアプリ開発。";
 
   // ------------------------
   // Projects Section
   // ------------------------
-  document.getElementById('projects-title').textContent =
-    isEn ? "Projects" : "プロジェクト";
+  document.getElementById('projects-title').textContent = isEn ? "Projects" : "プロジェクト";
+  document.getElementById('projects-sub').textContent = isEn ? "Childhood Games" : "子供の頃のゲーム";
 
-  document.getElementById('projects-sub').textContent =
-    isEn ? "Featured project: Booking System (full-stack)" : "注目プロジェクト：予約管理システム（フルスタック）";
+  // Project 3: Rock Paper Scissors
+  document.getElementById('project3-title').textContent = isEn ? "Rock Paper Scissors" : "じゃんけんゲーム";
+  document.getElementById('project3-desc').textContent = isEn ? "A classic Rock, Paper, Scissors game featuring an interactive UI and score tracking." : "インタラクティブなUIとスコア記録機能を備えた、クラシックなじゃんけんゲーム。";
+  document.getElementById('project3-tech-label').textContent = isEn ? "Tech:" : "技術:";
 
-  document.getElementById('project1-title').textContent =
-    isEn ? "Booking System (PHP + MySQL)" : "予約管理システム（PHP + MySQL）";
+  // Project 4: Color Match
+  document.getElementById('project4-title').textContent = isEn ? "Color Match" : "カラーマッチング";
+  document.getElementById('project4-desc').textContent = isEn ? "A vibrant color-matching puzzle game designed to test your visual speed and accuracy." : "視覚的なスピードと正確性をテストするために設計された、鮮やかな色彩のパズルゲーム。";
+  document.getElementById('project4-tech-label').textContent = isEn ? "Tech:" : "技術:";
 
-  document.getElementById('project1-desc').textContent =
-    isEn
-      ? "Full-stack booking app with reservations, availability checks, admin panel, and CSV export."
-      : "予約、空き状況確認、管理者パネル、CSVエクスポート機能を備えたフルスタックアプリ。";
+  // Project 5: Snake Game
+  document.getElementById('project5-title').textContent = isEn ? "Snake Game" : "スネークゲーム";
+  document.getElementById('project5-desc').textContent = isEn ? "The traditional arcade Snake game built from scratch, featuring smooth controls and high-score saving." : "スムーズな操作性とハイスコア保存機能を備えた、一から構築された伝統的なスネークゲーム。";
+  document.getElementById('project5-tech-label').textContent = isEn ? "Tech:" : "技術:";
 
-  document.getElementById('project1-tech-label').textContent =
-    isEn ? "Tech:" : "使用技術:";
+  document.getElementById('contact-title').textContent = isEn ? "Contact" : "お問い合わせ";
+  document.getElementById('contact-sub').textContent = isEn ? "Send me a message or find me on GitHub / Twitter / Instagram" : "メール、GitHub / Twitter / Instagram でご連絡ください。";
 
-  document.getElementById('project2-title').textContent =
-    isEn ? "Portfolio Site" : "ポートフォリオサイト";
-
-  document.getElementById('project2-desc').textContent =
-    isEn
-      ? "This portfolio site (responsive, bilingual)."
-      : "このポートフォリオサイト（レスポンシブ対応・日英バイリンガル）。";
-
-  document.getElementById('project2-tech-label').textContent =
-    isEn ? "Tech:" : "使用技術:";
-
-  document.getElementById('contact-title').textContent =
-    isEn ? "Contact" : "お問い合わせ";
-
-  document.getElementById('contact-sub').textContent =
-    isEn
-      ? "Send me a message or find me on GitHub / Twitter / Instagram"
-      : "メール、GitHub / Twitter / Instagram でご連絡ください。";
-
-  // Switch typed effect language
   window.setTypedLang(lang);
 }
 
 langEnBtn.addEventListener('click', () => setLang('en'));
 langJpBtn.addEventListener('click', () => setLang('jp'));
-
-
-langEnBtn.addEventListener('click', () => setLang('en'));
-langJpBtn.addEventListener('click', () => setLang('jp'));
-
-// ------------------------
-// Contact form handling (demo only)
-// ------------------------
-document.getElementById('contactForm').addEventListener('submit', function (e) {
-  e.preventDefault();
-
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const subject = document.getElementById('subject').value.trim();
-  const message = document.getElementById('message').value.trim();
-
-  if (!name || !email || !message) {
-    alert('Please fill required fields.');
-    return;
-  }
-
-  const mailto = `mailto:your.email@example.com?subject=${encodeURIComponent(subject || 'Contact from portfolio')}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message)}`;
-  window.location.href = mailto;
-});
